@@ -41,68 +41,68 @@ int	ft_validate_input(char *str)
 
 char	*ft_trim_input(char *str)
 {
-    int start;
-    int end;
-    char *result;
+	int		start;
+	int		end;
+	char	*result;
 
-    start = 0;
-    while (str[start] == ' ')
-        start++;
-    end = ft_strlen(str) - 1;
-    while (end > start && str[end] == ' ')
-        end--;
-    result = malloc(end - start + 2);
-    if (!result)
-        return (NULL);
-    ft_strlcpy(result, str + start, end - start + 2);
-    return (result);
+	start = 0;
+	while (str[start] == ' ')
+		start++;
+	end = ft_strlen(str) - 1;
+	while (end > start && str[end] == ' ')
+		end--;
+	result = malloc(end - start + 2);
+	if (!result)
+		return (NULL);
+	ft_strlcpy(result, str + start, end - start + 2);
+	return (result);
 }
 
-int ft_check_duplicates(t_stack *stack)
+int	ft_check_duplicates(t_stack *stack)
 {
-    t_stack *current;
-    t_stack *compare;
+	t_stack	*current;
+	t_stack	*compare;
 
-    current = stack;
-    while (current)
-    {
-        compare = current->next;
-        while (compare)
-        {
-            if (current->content == compare->content)
-                return (1);
-            compare = compare->next;
-        }
-        current = current->next;
-    }
-    return (0);
+	current = stack;
+	while (current)
+	{
+		compare = current->next;
+		while (compare)
+		{
+			if (current->content == compare->content)
+				return (1);
+			compare = compare->next;
+		}
+		current = current->next;
+	}
+	return (0);
 }
 
-void ft_handle_error(t_stack **stack)
+void	ft_handle_error(t_stack **stack)
 {
-    ft_putstr_fd("Error\n", 2);
-    if (stack && *stack)
-        ft_clear_stack(stack);
-    exit(1);
+	ft_putstr_fd("Error\n", 2);
+	if (stack && *stack)
+		ft_clear_stack(stack);
+	exit(1);
 }
 
-int ft_count_numbers(char *str, char delimiter)
+int	ft_count_numbers(char *str, char delimiter)
 {
-    int count;
-    int i;
+	int	count;
+	int	i;
 
-    count = 0;
-    i = 0;
-    while (str[i])
-    {
-        while (str[i] == delimiter)
-            i++;
-        if (str[i])
-        {
-            count++;
-            while (str[i] && str[i] != delimiter)
-                i++;
-        }
-    }
-    return (count);
+	count = 0;
+	i = 0;
+	while (str[i])
+	{
+		while (str[i] == delimiter)
+			i++;
+		if (str[i])
+		{
+			count++;
+			while (str[i] && str[i] != delimiter)
+				i++;
+		}
+	}
+	return (count);
 }
