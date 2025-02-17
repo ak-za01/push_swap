@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*   By: anktiri <anktiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 18:51:11 by codespace         #+#    #+#             */
-/*   Updated: 2025/02/14 18:56:35 by codespace        ###   ########.fr       */
+/*   Updated: 2025/02/17 17:46:23 by anktiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,14 +35,8 @@ int	main(int ac, char **av)
 		return (0);
 	stack_a = ft_create_stack(ac, av);
 	stack_b = NULL;
-	while (stack_a)
-	{
-		ft_printf("Stack A:\n");
-		ft_print_stack(stack_a);
-		ft_printf("Stack B:\n");
-		push(&stack_a, &stack_b);
-		ft_print_stack(stack_b);
-	}
+	if (ft_stack_size(stack_a) == 3)
+		sort_three(&stack_a);
 	ft_clear_stack(&stack_a);
 	ft_clear_stack(&stack_b);
 	atexit(check_leaks);

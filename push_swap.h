@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*   By: anktiri <anktiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 18:52:55 by codespace         #+#    #+#             */
-/*   Updated: 2025/02/14 18:52:56 by codespace        ###   ########.fr       */
+/*   Updated: 2025/02/17 17:44:07 by anktiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,9 +52,12 @@ size_t				ft_strlcpy(char *dst, char *src, size_t dstsize);
 char				**ft_split(char const *s, char c);
 
 // Stack Operations
-void				swap(t_stack **stack);
-void				push(t_stack **src, t_stack **dst);
-void				rotate(t_stack **stack);
-void				reverse_rotate(t_stack **stack);
+void				swap(t_stack **stack, char c);
+void				push(t_stack **src, t_stack **dst, char c);
+void				rotate(t_stack **stack, char c);
+void				reverse_rotate(t_stack **stack, char c);
+
+// Sorting Functions
+void sort_three(t_stack **a);
 
 #endif
