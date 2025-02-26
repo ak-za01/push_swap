@@ -6,7 +6,7 @@
 /*   By: anktiri <anktiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 18:52:55 by codespace         #+#    #+#             */
-/*   Updated: 2025/02/22 16:08:52 by anktiri          ###   ########.fr       */
+/*   Updated: 2025/02/26 12:37:30 by anktiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,13 @@ typedef struct s_stack
 	struct s_stack	*next;
 }					t_stack;
 
+typedef struct s_chunk_data
+{
+	int	chunk_count;
+	int	chunk_size;
+	int	i;
+	int	pushed;
+}	t_chunk_data;
 // Error Handling
 int					ft_validate_input(char *str);
 char				*ft_trim_input(char *str);
@@ -57,11 +64,15 @@ void				swap(t_stack **stack, char c, int f);
 void				push(t_stack **src, t_stack **dst, char c);
 void				rotate(t_stack **stack, char c, int f);
 void				reverse_rotate(t_stack **stack, char c, int f);
-void	ss(t_stack **stack_a, t_stack **stack_b);
-void	rr(t_stack **stack_a, t_stack **stack_b);
-void	rrr(t_stack **stack_a, t_stack **stack_b);
+void				ss(t_stack **stack_a, t_stack **stack_b);
+void				rr(t_stack **stack_a, t_stack **stack_b);
+void				rrr(t_stack **stack_a, t_stack **stack_b);
 
 // Sorting Functions
+void				sort_three(t_stack **a);
 void				ft_sort(t_stack **a, t_stack **b);
+void				push_chunks_to_b(t_stack **a, t_stack **b, int size);
+int					find_highest_index(t_stack *stack);
+void				push_back_to_a(t_stack **a, t_stack **b);
 
 #endif
