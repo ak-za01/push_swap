@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   moves.c                                            :+:      :+:    :+:   */
+/*   moves_1.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anktiri <anktiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 18:50:21 by codespace         #+#    #+#             */
-/*   Updated: 2025/02/17 17:43:45 by anktiri          ###   ########.fr       */
+/*   Updated: 2025/02/22 16:16:06 by anktiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	swap(t_stack **stack, char c)
+void	swap(t_stack **stack, char c, int f)
 {
 	t_stack	*first;
 	t_stack	*second;
@@ -26,7 +26,8 @@ void	swap(t_stack **stack, char c)
 	*stack = second;
 	second->next = first;
 	first->next = third;
-	ft_printf("s%c\n", c);
+	if (f)
+		ft_printf("s%c\n", c);
 }
 
 void	push(t_stack **src, t_stack **dst, char c)
@@ -42,7 +43,7 @@ void	push(t_stack **src, t_stack **dst, char c)
 	ft_printf("p%c\n", c);
 }
 
-void	rotate(t_stack **stack, char c)
+void	rotate(t_stack **stack, char c, int f)
 {
 	t_stack	*first;
 	t_stack	*last;
@@ -54,10 +55,11 @@ void	rotate(t_stack **stack, char c)
 	*stack = first->next;
 	first->next = NULL;
 	last->next = first;
-	ft_printf("r%c\n", c);
+	if (f)
+		ft_printf("r%c\n", c);
 }
 
-void	reverse_rotate(t_stack **stack, char c)
+void	reverse_rotate(t_stack **stack, char c, int f)
 {
 	t_stack	*first;
 	t_stack	*last;
@@ -73,5 +75,6 @@ void	reverse_rotate(t_stack **stack, char c)
 	before_last->next = NULL;
 	last->next = first;
 	*stack = last;
-	ft_printf("rr%c\n", c);
+	if (f)
+		ft_printf("rr%c\n", c);
 }

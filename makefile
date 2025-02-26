@@ -1,9 +1,9 @@
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror #-fsanitize=address -g
 NAME = push_swap
 SRC = handle_error.c parsing.c push_swap.c \
 	  stack_operations.c ft_split.c utils.c \
-	  moves.c sort.c
+	  moves_1.c moves_2.c sort.c
 OBJ = $(SRC:.c=.o)
 FT_PRINTF_DIR = ft_printf
 

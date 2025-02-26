@@ -6,7 +6,7 @@
 /*   By: anktiri <anktiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 18:52:55 by codespace         #+#    #+#             */
-/*   Updated: 2025/02/17 17:44:07 by anktiri          ###   ########.fr       */
+/*   Updated: 2025/02/22 16:08:52 by anktiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 typedef struct s_stack
 {
 	int				content;
+	int				index;
 	struct s_stack	*next;
 }					t_stack;
 
@@ -52,12 +53,15 @@ size_t				ft_strlcpy(char *dst, char *src, size_t dstsize);
 char				**ft_split(char const *s, char c);
 
 // Stack Operations
-void				swap(t_stack **stack, char c);
+void				swap(t_stack **stack, char c, int f);
 void				push(t_stack **src, t_stack **dst, char c);
-void				rotate(t_stack **stack, char c);
-void				reverse_rotate(t_stack **stack, char c);
+void				rotate(t_stack **stack, char c, int f);
+void				reverse_rotate(t_stack **stack, char c, int f);
+void	ss(t_stack **stack_a, t_stack **stack_b);
+void	rr(t_stack **stack_a, t_stack **stack_b);
+void	rrr(t_stack **stack_a, t_stack **stack_b);
 
 // Sorting Functions
-void sort_three(t_stack **a);
+void				ft_sort(t_stack **a, t_stack **b);
 
 #endif
