@@ -6,7 +6,7 @@
 /*   By: anktiri <anktiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 18:52:55 by codespace         #+#    #+#             */
-/*   Updated: 2025/02/26 12:37:30 by anktiri          ###   ########.fr       */
+/*   Updated: 2025/03/03 17:43:57 by anktiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ typedef struct s_chunk_data
 	int	i;
 	int	pushed;
 }	t_chunk_data;
+
 // Error Handling
 int					ft_validate_input(char *str);
 char				*ft_trim_input(char *str);
