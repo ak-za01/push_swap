@@ -6,16 +6,11 @@
 /*   By: anktiri <anktiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 18:51:11 by codespace         #+#    #+#             */
-/*   Updated: 2025/02/26 12:54:07 by anktiri          ###   ########.fr       */
+/*   Updated: 2025/03/05 16:35:36 by anktiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-void	check_leaks(void)
-{
-	system("leaks -q push_swap");
-}
 
 int	main(int ac, char **av)
 {
@@ -32,6 +27,5 @@ int	main(int ac, char **av)
 		ft_sort(&stack_a, &stack_b);
 	ft_clear_stack(&stack_a);
 	ft_clear_stack(&stack_b);
-	//atexit(check_leaks);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: anktiri <anktiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 10:20:53 by anktiri           #+#    #+#             */
-/*   Updated: 2025/03/05 11:30:41 by anktiri          ###   ########.fr       */
+/*   Updated: 2025/03/05 16:35:49 by anktiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,11 +55,13 @@ void	sort_three(t_stack **a)
 
 void	sort_four(t_stack **a, t_stack **b)
 {
-	int index;
+	int	index;
 
 	index = find_lowest_index(*a);
 	while ((*a)->index != index)
 		rotate(a, 'a', 1);
+	if (ft_validate_stack_order(*a))
+		return ;
 	push(a, b, 'b');
 	sort_three(a);
 	push(b, a, 'a');
@@ -95,6 +97,8 @@ void	sort_five(t_stack **a, t_stack **b)
 		while ((*a)->index != 0)
 			reverse_rotate(a, 'a', 1);
 	}
+	if (ft_validate_stack_order(*a))
+		return ;
 	push(a, b, 'b');
 	sort_four(a, b);
 	push(b, a, 'a');

@@ -6,7 +6,7 @@
 /*   By: anktiri <anktiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 13:00:25 by anktiri           #+#    #+#             */
-/*   Updated: 2025/03/05 14:15:11 by anktiri          ###   ########.fr       */
+/*   Updated: 2025/03/05 16:35:24 by anktiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,9 @@ static void	process_final_chunk(t_stack **a, t_stack **b, int *pushed, int size)
 	}
 	else
 		rotate(a, 'a', 1);
-
 }
-static void	handle_current_element(t_stack **a, t_stack **b, int *i, int chunk_size)
+
+static void	handle_current_element(t_stack **a, t_stack **b, int *i, int size)
 {
 	if ((*a)->index <= *i)
 	{
@@ -39,7 +39,7 @@ static void	handle_current_element(t_stack **a, t_stack **b, int *i, int chunk_s
 		rotate(b, 'b', 1);
 		(*i)++;
 	}
-	else if ((*a)->index <= *i + chunk_size)
+	else if ((*a)->index <= *i + size)
 	{
 		push(a, b, 'b');
 		(*i)++;
@@ -59,7 +59,7 @@ void	push_chunks_to_b(t_stack **a, t_stack **b, int size)
 	chunk_size = size / chunk_count;
 	i = 0;
 	pushed = 0;
-	while (ft_stack_size(*a) > 0) // Push all elements to stack B
+	while (ft_stack_size(*a) > 0)
 	{
 		if (pushed >= size - chunk_size)
 			process_final_chunk(a, b, &pushed, size);
