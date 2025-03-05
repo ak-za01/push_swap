@@ -6,11 +6,19 @@
 /*   By: anktiri <anktiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 13:00:25 by anktiri           #+#    #+#             */
-/*   Updated: 2025/03/03 20:28:16 by anktiri          ###   ########.fr       */
+/*   Updated: 2025/03/05 14:15:11 by anktiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+static int	get_chunk_count(int size)
+{
+	if (size <= 100)
+		return (6);
+	else
+		return (15);
+}
 
 static void	process_final_chunk(t_stack **a, t_stack **b, int *pushed, int size)
 {
@@ -21,8 +29,8 @@ static void	process_final_chunk(t_stack **a, t_stack **b, int *pushed, int size)
 	}
 	else
 		rotate(a, 'a', 1);
-}
 
+}
 static void	handle_current_element(t_stack **a, t_stack **b, int *i, int chunk_size)
 {
 	if ((*a)->index <= *i)
@@ -38,14 +46,6 @@ static void	handle_current_element(t_stack **a, t_stack **b, int *i, int chunk_s
 	}
 	else
 		rotate(a, 'a', 1);
-}
-
-static int	get_chunk_count(int size)
-{
-	if (size <= 100)
-		return (5);
-	else
-		return (11);
 }
 
 void	push_chunks_to_b(t_stack **a, t_stack **b, int size)

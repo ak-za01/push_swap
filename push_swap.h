@@ -6,7 +6,7 @@
 /*   By: anktiri <anktiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 18:52:55 by codespace         #+#    #+#             */
-/*   Updated: 2025/03/03 17:43:57 by anktiri          ###   ########.fr       */
+/*   Updated: 2025/03/05 14:11:13 by anktiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,6 @@ typedef struct s_stack
 	struct s_stack	*next;
 }					t_stack;
 
-typedef struct s_chunk_data
-{
-	int	chunk_count;
-	int	chunk_size;
-	int	i;
-	int	pushed;
-}	t_chunk_data;
-
 // Error Handling
 int					ft_validate_input(char *str);
 char				*ft_trim_input(char *str);
@@ -46,6 +38,7 @@ void				ft_clear_stack(t_stack **stack);
 void				ft_add_to_stack(t_stack **stack, int value);
 t_stack				*ft_last_stack_node(t_stack *stack);
 int					ft_stack_size(t_stack *stack);
+void				list_index(t_stack **stack);
 
 // Parsing Functions
 int					ft_atoi(char *str, int *error);
@@ -71,6 +64,8 @@ void				rrr(t_stack **stack_a, t_stack **stack_b);
 
 // Sorting Functions
 void				sort_three(t_stack **a);
+void				sort_four(t_stack **a, t_stack **b);
+void				sort_five(t_stack **a, t_stack **b);
 void				ft_sort(t_stack **a, t_stack **b);
 void				push_chunks_to_b(t_stack **a, t_stack **b, int size);
 int					find_highest_index(t_stack *stack);

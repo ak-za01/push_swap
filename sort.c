@@ -6,7 +6,7 @@
 /*   By: anktiri <anktiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 19:12:25 by anktiri           #+#    #+#             */
-/*   Updated: 2025/03/03 20:28:43 by anktiri          ###   ########.fr       */
+/*   Updated: 2025/03/05 11:23:55 by anktiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,33 +36,6 @@ void	list_index(t_stack **stack)
 	}
 }
 
-void	sort_three(t_stack **a)
-{
-	int	first;
-	int	second;
-	int	third;
-
-	first = (*a)->content;
-	second = (*a)->next->content;
-	third = (*a)->next->next->content;
-	if (first > second && second < third && first < third)
-		swap(a, 'a', 1);
-	else if (first > second && second > third)
-	{
-		swap(a, 'a', 1);
-		reverse_rotate(a, 'a', 1);
-	}
-	else if (first > second && second < third && first > third)
-		rotate(a, 'a', 1);
-	else if (first < second && second > third && first < third)
-	{
-		swap(a, 'a', 1);
-		rotate(a, 'a', 1);
-	}
-	else if (first < second && second > third && first > third)
-		reverse_rotate(a, 'a', 1);
-}
-
 void	ft_sort(t_stack **a, t_stack **b)
 {
 	int	size;
@@ -71,12 +44,17 @@ void	ft_sort(t_stack **a, t_stack **b)
 	if (size <= 1)
 		return ;
 	list_index(a);
-	if (size <= 3)
+	if (size == 2)
+		swap(a, 'a', 1);
+	else if (size == 3)
 		sort_three(a);
+	else if (size == 4)
+		sort_four(a, b);
+	else if (size <= 5)
+		sort_five(a, b);
 	else
 	{
 		push_chunks_to_b(a, b, size);
-		//sort_three(a);
 		push_back_to_a(a, b);
 	}
 }
