@@ -6,11 +6,11 @@
 /*   By: anktiri <anktiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 13:00:25 by anktiri           #+#    #+#             */
-/*   Updated: 2025/03/05 16:35:24 by anktiri          ###   ########.fr       */
+/*   Updated: 2025/03/06 21:32:41 by anktiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 static int	get_chunk_count(int size)
 {

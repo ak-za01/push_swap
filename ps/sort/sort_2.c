@@ -6,11 +6,11 @@
 /*   By: anktiri <anktiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 10:20:53 by anktiri           #+#    #+#             */
-/*   Updated: 2025/03/05 16:35:49 by anktiri          ###   ########.fr       */
+/*   Updated: 2025/03/06 21:32:50 by anktiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 int	find_lowest_index(t_stack *stack)
 {

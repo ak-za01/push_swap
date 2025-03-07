@@ -6,11 +6,11 @@
 /*   By: anktiri <anktiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 21:37:06 by anktiri           #+#    #+#             */
-/*   Updated: 2025/02/11 21:50:02 by anktiri          ###   ########.fr       */
+/*   Updated: 2025/03/06 21:33:19 by anktiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 int	ft_validate_input(char *str)
 {

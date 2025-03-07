@@ -6,11 +6,11 @@
 /*   By: anktiri <anktiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 19:12:25 by anktiri           #+#    #+#             */
-/*   Updated: 2025/03/05 11:23:55 by anktiri          ###   ########.fr       */
+/*   Updated: 2025/03/06 21:33:00 by anktiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	list_index(t_stack **stack)
 {

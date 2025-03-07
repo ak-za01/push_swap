@@ -6,7 +6,7 @@
 /*   By: anktiri <anktiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 18:52:55 by codespace         #+#    #+#             */
-/*   Updated: 2025/03/05 14:11:13 by anktiri          ###   ########.fr       */
+/*   Updated: 2025/03/07 16:56:23 by anktiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,8 @@ void				ss(t_stack **stack_a, t_stack **stack_b);
 void				rr(t_stack **stack_a, t_stack **stack_b);
 void				rrr(t_stack **stack_a, t_stack **stack_b);
 
-// Sorting Functions
+// Sorting Functions       
+
 void				sort_three(t_stack **a);
 void				sort_four(t_stack **a, t_stack **b);
 void				sort_five(t_stack **a, t_stack **b);

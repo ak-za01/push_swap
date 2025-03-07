@@ -6,11 +6,11 @@
 /*   By: anktiri <anktiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 18:31:47 by anktiri           #+#    #+#             */
-/*   Updated: 2025/02/11 20:50:12 by anktiri          ###   ########.fr       */
+/*   Updated: 2025/03/06 21:33:17 by anktiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 static int	ft_cw(const char *s, char c)
 {
