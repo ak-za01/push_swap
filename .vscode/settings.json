@@ -1,5 +1,10 @@
 {
     "[c]": {
         "editor.defaultFormatter": "keyhr.42-c-format"
-    },
+	},
+	"files.associations": {
+		"checker_bonus.h": "c",
+		"push_swap.h": "c",
+		"limits.h": "c"
+	},
 }

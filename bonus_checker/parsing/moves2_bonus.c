@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker.c                                          :+:      :+:    :+:   */
+/*   moves2_bonus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anktiri <anktiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/14 18:51:11 by codespace         #+#    #+#             */
-/*   Updated: 2025/03/07 21:52:39 by anktiri          ###   ########.fr       */
+/*   Created: 2025/03/08 17:30:28 by anktiri           #+#    #+#             */
+/*   Updated: 2025/03/08 17:30:45 by anktiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../checker_bonus.h"
 
-int	main(int ac, char **av)
+void	rrr(t_stack **stack_a, t_stack **stack_b)
 {
-	t_stack	*stack_a;
-	t_stack	*stack_b;
+	reverse_rotate(stack_a);
+	reverse_rotate(stack_b);
+}
 
-	if (ac == 1)
-		return (0);
-	stack_a = ft_create_stack(ac, av);
-	if (!stack_a)
-		return (0);
-	stack_b = NULL;
-	if (!ft_validate_stack_order(stack_a))
-		ft_sort(&stack_a, &stack_b);
-	ft_clear_stack(&stack_a);
-	ft_clear_stack(&stack_b);
-	return (0);
+void	rr(t_stack **stack_a, t_stack **stack_b)
+{
+	rotate(stack_a);
+	rotate(stack_b);
 }

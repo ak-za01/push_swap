@@ -6,15 +6,15 @@ all:
 	@make -C ./ps
 
 bonus: 
-	@make -C ./checker
+	@make -C ./bonus_checker
 
 clean:
 	@make clean -C ./ps
-#	@make clean -C ./$(BONUS_DIR)
+	@make clean -C ./bonus_checker
 
 fclean:
 	@make fclean -C ./ps
-#	@make fclean -C ./$(BONUS_DIR)
+	@make fclean -C ./bonus_checker
 
 re: fclean all
 

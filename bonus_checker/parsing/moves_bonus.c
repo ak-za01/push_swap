@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   moves.c                                            :+:      :+:    :+:   */
+/*   moves_bonus.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anktiri <anktiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 18:50:21 by codespace         #+#    #+#             */
-/*   Updated: 2025/03/07 21:50:17 by anktiri          ###   ########.fr       */
+/*   Updated: 2025/03/08 17:30:41 by anktiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../checker_bonus.h"
 
-void	swap(t_stack **stack, char c, int f)
+void	swap(t_stack **stack)
 {
 	t_stack	*first;
 	t_stack	*second;
@@ -26,11 +26,9 @@ void	swap(t_stack **stack, char c, int f)
 	*stack = second;
 	second->next = first;
 	first->next = third;
-	if (f)
-		ft_printf("s%c\n", c);
 }
 
-void	push(t_stack **src, t_stack **dst, char c)
+void	push(t_stack **src, t_stack **dst)
 {
 	t_stack	*tmp;
 
@@ -40,10 +38,9 @@ void	push(t_stack **src, t_stack **dst, char c)
 	*src = (*src)->next;
 	tmp->next = *dst;
 	*dst = tmp;
-	ft_printf("p%c\n", c);
 }
 
-void	rotate(t_stack **stack, char c, int f)
+void	rotate(t_stack **stack)
 {
 	t_stack	*first;
 	t_stack	*last;
@@ -55,11 +52,9 @@ void	rotate(t_stack **stack, char c, int f)
 	*stack = first->next;
 	first->next = NULL;
 	last->next = first;
-	if (f)
-		ft_printf("r%c\n", c);
 }
 
-void	reverse_rotate(t_stack **stack, char c, int f)
+void	reverse_rotate(t_stack **stack)
 {
 	t_stack	*first;
 	t_stack	*last;
@@ -75,27 +70,10 @@ void	reverse_rotate(t_stack **stack, char c, int f)
 	before_last->next = NULL;
 	last->next = first;
 	*stack = last;
-	if (f)
-		ft_printf("rr%c\n", c);
 }
 
 void	ss(t_stack **stack_a, t_stack **stack_b)
 {
-	swap(stack_a, 'a', 0);
-	swap(stack_b, 'b', 0);
-	ft_printf("ss\n");
-}
-
-void	rrr(t_stack **stack_a, t_stack **stack_b)
-{
-	reverse_rotate(stack_a, 'a', 0);
-	reverse_rotate(stack_b, 'b', 0);
-	ft_printf("rrr\n");
-}
-
-void	rr(t_stack **stack_a, t_stack **stack_b)
-{
-	rotate(stack_a, 'a', 0);
-	rotate(stack_b, 'b', 0);
-	ft_printf("rr\n");
+	swap(stack_a);
+	swap(stack_b);
 }
