@@ -6,7 +6,7 @@
 /*   By: anktiri <anktiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 18:52:55 by codespace         #+#    #+#             */
-/*   Updated: 2025/03/07 16:56:23 by anktiri          ###   ########.fr       */
+/*   Updated: 2025/03/10 16:29:30 by anktiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,6 @@ void				sort_four(t_stack **a, t_stack **b);
 void				sort_five(t_stack **a, t_stack **b);
 void				ft_sort(t_stack **a, t_stack **b);
 void				push_chunks_to_b(t_stack **a, t_stack **b, int size);
-int					find_highest_index(t_stack *stack);
 void				push_back_to_a(t_stack **a, t_stack **b);
-
+int					ft_validate_reverse_order(t_stack *stack);
 #endif

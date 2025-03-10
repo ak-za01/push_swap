@@ -6,7 +6,7 @@
 /*   By: anktiri <anktiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 18:51:11 by codespace         #+#    #+#             */
-/*   Updated: 2025/03/08 17:52:07 by anktiri          ###   ########.fr       */
+/*   Updated: 2025/03/10 14:36:24 by anktiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,11 @@ static void	ft_sort(t_stack **stack_a, t_stack **stack_b)
 	check_order(*stack_a, *stack_b);
 }
 
+void	ll(void)
+{
+	system("leaks checker");
+}
+
 int	main(int ac, char **av)
 {
 	t_stack	*stack_a;
@@ -59,5 +64,6 @@ int	main(int ac, char **av)
 		ft_sort(&stack_a, &stack_b);
 	ft_clear_stack(&stack_a);
 	ft_clear_stack(&stack_b);
+	// atexit(ll);
 	return (0);
 }

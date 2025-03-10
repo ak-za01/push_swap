@@ -13,7 +13,7 @@ SRCS = parsing/ft_split.c \
        sort/chunks.c \
        sort/moves.c \
        sort/push_back.c \
-       sort/sort_2.c \
+       sort/sort_under5.c \
        sort/sort.c \
        sort/stack_operations.c \
        push_swap.c

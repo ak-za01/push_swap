@@ -6,7 +6,7 @@
 /*   By: anktiri <anktiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 18:50:21 by codespace         #+#    #+#             */
-/*   Updated: 2025/03/06 21:32:45 by anktiri          ###   ########.fr       */
+/*   Updated: 2025/03/10 11:03:39 by anktiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,11 +77,4 @@ void	reverse_rotate(t_stack **stack, char c, int f)
 	*stack = last;
 	if (f)
 		ft_printf("rr%c\n", c);
-}
-
-void	ss(t_stack **stack_a, t_stack **stack_b)
-{
-	swap(stack_a, 'a', 0);
-	swap(stack_b, 'b', 0);
-	ft_printf("ss\n");
 }
